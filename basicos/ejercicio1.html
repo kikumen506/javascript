@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+
+
+	<script>
+		
+
+		//dado un 54321 segundos calcula las horas, minutos y segundos restantes que hay en esa cantidad de tiempo.
+
+
+		var segundosTotales = prompt('Dame una cantidad de segundos');
+
+			segundosTotales = parseInt(segundosTotales);
+
+		//que es lo me piden
+
+
+		var horas;
+		var minutos;
+		var segundosRestantes;
+
+		horas = segundosTotales / (60*60); //15
+
+		segundosRestantes = segundosTotales % (60*60); //321
+
+		minutos = segundosRestantes / 60;
+
+		segundosRestantes = segundosRestantes % 60;
+
+		var horasRendondeadas = parseInt(horas);
+		minutos = parseInt(minutos);
+		
+
+		var resultado = 'En '+segundosTotales+' segundos hay '+horasRendondeadas+' horas, '+minutos+' minutos y '+segundosRestantes+' segundos';
+
+		alert(resultado);
+
+	</script>
+	
+</body>
+</html>
