@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Operador ternario</title>
+</head>
+<body>
+	
+
+	<script>
+		
+		var nota = prompt('Dame un nota');
+
+		var resultado = "";
+
+		if(nota < 5)
+		{
+			resultado = "suspenso";
+		}
+		else
+		{
+			resultado = "aprobado";
+		}
+
+		alert(resultado);
+
+		//operador ternario es equivalente a un condicional simple con secuencia de escape.
+
+		var otroresultado = (nota < 5)? "suspenso" : "aprobado";
+
+		alert(otroresultado);
+
+
+
+
+
+	</script>
+</body>
+</html>

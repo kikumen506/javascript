@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2 condicional</title>
+</head>
+<body>
+	
+	<script>
+		
+		//Me piden un numero cualquiera y me tienes que decir si el numero es par o impar.
+
+
+		//if
+
+		var numero = prompt('Dame un numero');
+
+
+
+		 if(numero%2 == 0 && isNaN(numero) == false)
+		{
+			alert('es par');
+		}
+		else if(!isNaN(numero))
+		{
+			alert('impar');
+		}
+		else{
+			alert('no es un numero');
+		} 
+
+		//switch
+
+		var condicion = (numero%2 == 0 && isNaN(numero) == false);
+	
+
+		switch(condicion){
+
+			case true:
+				alert('es par');
+			break;
+
+			case false:
+				alert('es impar');
+			break;
+
+		}
+
+
+
+
+	</script>
+</body>
+</html>
