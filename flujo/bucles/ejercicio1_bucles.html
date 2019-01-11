@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			float:left;
+			color: white;
+		}
+
+		.rojo{
+			background-color: tomato;
+		}
+
+		.negro{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		
+		//document.write('<div class="negro">1</div>');
+		
+
+		//quiero una linea de 10 cuadrados intercalados entre si, rojo - negro
+
+		for(i=1; i<=10; i++)
+		{
+	
+			if(i%2 == 0)
+			{
+				document.write('<div class="negro">'+i+'</div>');
+			}
+			else
+			{
+				document.write('<div class="rojo">'+i+'</div>');
+			}
+		}
+
+
+	</script>
+
+</body>
+</html>

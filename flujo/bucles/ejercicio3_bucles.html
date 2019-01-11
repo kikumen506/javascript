@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3 bucles</title>
+</head>
+<body>
+
+	<script>
+		
+		//dado 7654321 quiero que me saqueis por pantalla
+		// el ultimo digito, los dos ultimos digitos, y los 
+		// tres ultimos digitos, 1, 21, 32;
+
+		do{
+			var numero = prompt('Dame un numero');
+		}	
+		while ( isNaN(numero))
+
+		var ultimoDigito = numero%10;
+		var ultimaDecena = numero%100;
+		var ultimaCentena = numero%1000;
+
+ 		//321 
+ 		alert(ultimoDigito+', '+ultimaDecena+', '+ultimaCentena);
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
