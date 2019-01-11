@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Control de stock</title>
+</head>
+<body>
+	
+	<script>
+		
+
+		//dame un stock por pantalla, y realiza un función que me permita mostrar la cantidad de productos que tiene mi tienda
+
+		var stock = parseInt(prompt('Dame un stock'));
+
+		var mensaje = "hola";
+
+		function getStock(){
+			console.log(stock);
+		}
+
+		function addStock(pNumeroProductos){
+				stock = stock + pNumeroProductos;
+
+				//getStock();
+		}
+
+
+		function comprarProducto(pCantidadComprados){
+
+			if(pCantidadComprados <= stock)
+			{
+				stock = stock - pCantidadComprados;
+				return comprobarStock();
+			}
+			else
+			{
+				console.log('No tienes suficientes productos en tu la tienda, nuestro stoc es de '+stock);
+			}
+		}
+
+
+		function comprobarStock(){
+
+			var mensaje = (stock<=5)? "te quedan "+stock+" unidades" : "Tu stock es suficiente";
+
+			return mensaje;
+
+		}
+
+	</script>
+
+
+</body>
+</html>

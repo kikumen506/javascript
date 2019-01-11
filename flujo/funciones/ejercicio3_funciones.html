@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+
+	<style>
+		.row:after{
+			clear: both;
+			height: 0;
+			content: "";
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+
+	<script>
+		
+		//quiero que me hagais un programa que me permita realizar un tablero de ajedrez donde pueda elegir el tamaño de los casillas y la cantidad.
+
+
+		var tamanoCasilla = parseInt(prompt('Dame un tamaño de casilla'));
+		var numeroCasillasXfila = parseInt(prompt('Dame numero de casillas'));
+		var numeroFilas = parseInt(prompt('Dame numero de filas'));
+
+		numeroCasillasXfila = (numeroCasillasXfila > 8)? 8 : numeroCasillasXfila;
+
+		//crearFila(tamanoCasilla, numeroCasillasXfila, "par");
+
+		function crearFila(pTamano, pCasillas, pParidad)
+		{
+
+			var fila = "";
+
+			for(var i = 1; i<= pCasillas; i++)
+			{
+				if(pParidad == "par")
+				{
+					if(i%2 != 0)
+					{
+						fila += '<div style="width: '+pTamano+'px; height: '+pTamano+'px; background-color: black; float:left"></div>';
+					}
+					else
+					{
+						fila += '<div style="width: '+pTamano+'px; height: '+
+						pTamano+'px; background-color: beige; float:left"></div>';;
+					}
+				}
+				else
+				{
+					if(i%2 == 0)
+					{
+						fila += '<div style="width: '+pTamano+'px; height: '+pTamano+'px; background-color: black; float:left"></div>';
+					}
+					else
+					{
+						fila += '<div style="width: '+pTamano+'px; height: '+
+						pTamano+'px; background-color: beige; float:left"></div>';;
+					}
+				}
+
+				
+			}
+
+			document.write('<div class="row">'+fila+'</div>');
+
+		}
+
+		function crearTablero(pNumeroFilas){
+
+			for(var i= 0; i<pNumeroFilas; i++)
+			{
+				if(i%2 == 0)
+				{
+					crearFila(tamanoCasilla,numeroCasillasXfila,"par");
+				}
+				else{
+					crearFila(tamanoCasilla,numeroCasillasXfila,"impar");	
+				}
+			}
+		}
+
+		crearTablero(numeroFilas);
+
+</script>
+</body>
+</html>

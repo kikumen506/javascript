@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones ejercicios</title>
+</head>
+<body>
+	
+
+	<script>
+		
+		//una funcion que solicite una serie de numeros, y que no tenga en cuenta el 3, y me de el resultado de la suma de todos los numeros menos los 3.
+
+
+		function magicFuntion(){
+
+			var suma = 0;
+			
+			for(var i=0; i<arguments.length; i++)
+			{
+
+				if(arguments[i] != 3)
+				{
+					suma = suma + arguments[i];
+				}
+
+			}
+
+			return suma;
+
+		}
+
+
+	</script>
+</body>
+</html>

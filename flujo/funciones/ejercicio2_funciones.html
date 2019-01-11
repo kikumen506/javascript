@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Pintar figuras geometricas</title>
+</head>
+<body>
+	
+
+	<script>
+		
+		//tengo que pedir por pantalla que figura geometrica quieres pintar a elegir entre cuadrado y circulo, triangulo. Y después el color que quiere rellenar.
+
+		var figura = prompt('Dime una figura, circulo, cuadrado o triangulo');
+		var color = prompt('Dime un color, red, green, black');
+		var numeroElementos = parseInt(prompt('Cuantos elementos quieres'));
+
+
+		switch(figura){
+			
+			case "circulo":
+				crearCirculo(color, numeroElementos);
+			break;
+
+			case "cuadrado":
+				crearCuadrado(color, numeroElementos);
+			break;
+
+			case "triangulo":
+				crearTriangulo(color, numeroElementos);
+			break;
+
+		}
+
+
+		function crearCirculo(pColor, pElementos)
+		{
+			var colorCirculo = pColor;
+			var nElementos = pElementos;
+			var radio = prompt('dame un radio para mi circulo');
+			var contador = 0;
+			var resultado = "";
+
+			radio = parseInt(radio);
+
+			while(contador < nElementos)
+			{
+				resultado = resultado + '<div style="background-color: '+colorCirculo+'; width: '+2*radio+'px; height: '+2*radio+'px; border-radius: '+radio+'px"></div>';
+				contador++;
+			}
+
+			document.write(resultado);
+			
+
+		}
+
+		function crearCuadrado(pColor, pElementos)
+		{
+			var colorCuadrado = pColor;
+			var nElementos = pElementos;
+			var ancho = prompt('Dame un anchura');
+			var resultado = "";
+
+			ancho = parseInt(ancho);
+
+			for(var i=0; i<nElementos; i++)
+			{
+				resultado += '<div style="background-color: '+colorCuadrado+'; width: '+ancho+'px; height: '+ancho+'px; margin: 10px; float: left"></div>';
+			}
+
+			document.write(resultado);
+		}
+
+		function crearTriangulo(pColor, pElementos)
+		{
+			var colorTriangulo = pColor;
+			var nElementos = pElementos;
+			var ladoTriangulo = prompt('Dime que lado quieres pintar, left, right, bottom, top');
+			var base = prompt('Dame el ancho de la base');
+			var resultado = "";
+			var pintarlado = "";
+
+			switch(ladoTriangulo)
+			{
+				case "left":
+					pintarlado = "transparent transparent transparent "+colorTriangulo;
+				break;
+
+				case "right":
+					pintarlado = "transparent "+colorTriangulo+" transparent transparent";
+				break;
+
+				case "bottom":
+					pintarlado = "transparent transparent "+colorTriangulo+" transparent";
+				break;
+
+				case "top":
+					pintarlado = colorTriangulo+" transparent transparent transparent";
+				break;
+
+			}
+
+
+			for(var i=0; i<nElementos; i++)
+			{
+				resultado += '<div style="border-width: '+base+'px; border-color: '+pintarlado+'; border-style: solid; width: 0px; height: 0px"></div>';	
+			}
+
+			document.write(resultado);
+
+		}
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

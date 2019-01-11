@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Area de un circulo</title>
+
+</head>
+<body>
+	
+	<script>
+		//dada un radio recibido por pantalla, calcular el area de la circulo.
+
+		// pintar el circulo y elegir un color.
+
+		var radio = prompt('Dame de radio');
+
+		var color = prompt('Dime un color, rojo, verde, azul');
+
+		switch(color){
+			case "rojo":
+				color = "red";
+			break;
+
+			case "verde":
+				color = "green";
+			break;
+
+			case "azul":
+				color = "blue";
+			break;
+		}
+
+		radio = parseInt(radio);
+
+		
+		function calcularArea(){
+
+			const PI = 3.1415
+			var area = PI * (radio**2);
+			alert(area);
+			document.write('<div style="background-color: '+color+'; width: '+2*radio+'px; height: '+2*radio+'px; border-radius: 50% " ></div>')
+		}
+
+		calcularArea();
+
+
+		
+
+
+
+		
+	</script>
+</body>
+</html>

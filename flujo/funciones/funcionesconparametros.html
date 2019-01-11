@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones con parametros</title>
+</head>
+<body>
+
+	<script>
+
+		var anchito = prompt('Dame el width del rectangulo');
+
+		var altito = prompt('Dame el height del rectangulo');
+
+		var colorcito = prompt('Dame el color del rectangulo');
+
+
+		function dibujarRectangulo(pAncho, pAlto, pColor){
+
+			var ancho = pAncho;
+			var alto = pAlto;
+			var color = pColor;
+
+			console.log(color);
+			document.write('<div style="width:'+ancho+'px; height: '+alto+'px; background-color: '+color+'; margin-bottom: 10px"></div>');
+		}	
+
+
+		dibujarRectangulo(100, 20 ,"black");
+
+		dibujarRectangulo(40, 200 , "red");
+
+
+		dibujarRectangulo(anchito, altito , colorcito);
+
+
+
+
+	</script>
+	
+</body>
+</html>
