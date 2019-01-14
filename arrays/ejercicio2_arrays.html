@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2 arrays</title>
+</head>
+<body>
+	
+
+	<script>
+		
+
+			//como obtener numero aleatorios
+
+			var numero = parseInt(Math.random()*1000);
+
+			//alert(numero);
+
+
+			//crear un listado de 1000 numeros aleatorios, y devolverme un array con el listado de numeros pares.
+
+			var numerosAleatorios = new Array();
+
+			for(var i=0; i<	1000 ; i++)
+			{
+
+				numerosAleatorios[i] = parseInt(Math.random()*1000);
+			}
+
+			//console.log(numerosAleatorios);
+
+
+
+			function devolverListaPares(pLista)
+			{
+				var listaPares = new Array();
+				var contadorPares = 0;
+
+					for(var i=0; i<pLista.length; i++)
+					{
+						if(pLista[i]%2 == 0)
+						{
+							listaPares[contadorPares] = pLista[i];
+							contadorPares++;
+						}
+					}
+
+
+				console.log(listaPares)
+			}
+
+
+			function devolverListaImpares(pLista)
+			{
+				var listaImpares = new Array();
+				var contadorImpares = 0;
+
+					for(var i=0; i<pLista.length; i++)
+					{
+						if(pLista[i]%2 != 0)
+						{
+							listaImpares[contadorImpares] = pLista[i];
+							contadorImpares++;
+						}
+					}
+
+
+				console.log(listaImpares);
+
+			}
+
+
+			devolverListaPares(numerosAleatorios);
+
+			devolverListaImpares(numerosAleatorios);
+
+			var otroArray = new Array(2,3,4,6,7,4,78,9,78,0);
+
+			devolverListaPares(otroArray);
+
+			devolverListaImpares(otroArray);
+
+	</script>
+</body>
+</html>

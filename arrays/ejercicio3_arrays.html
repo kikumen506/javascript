@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3 - arrays</title>
+	<style>
+
+		.horizontal li{
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		.horizontal li a{
+			display: block;
+			background-color: black;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+		}
+
+		.horizontal li a:hover{
+			background-color: grey;
+			color: black;
+		}
+
+		.vertical li{
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.vertical li a{
+			display: block;
+			background-color: black;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		.vertical li a:hover{
+			background-color: grey;
+			color: black;
+		}
+		
+	</style>
+</head>
+<body>
+	<script>
+		
+			//crear un listado de secciones de una web.
+
+
+			// pinteis ese listado de forma dinamica, el resultado deberá pintar todo en un menu de navegación en html y si aumento o disminuyo el listado el menu debera actualizarse.
+
+			//los enlaces del href tambien hay que generarlos en funcion del nombre de la sección
+
+			//lo creas tu
+
+			var listaSecciones = new Array('HOME','ABOUT', 'SERVICES', 'CONTACT','GALLERY');
+
+			
+
+			function pedirSecciones(){
+				var seccionDinamicas = new Array();
+
+						var seccion = ""; 
+						var numeroSecciones =  0;
+
+						do
+						{
+							seccion = prompt('Dime una sección. Si quieres terminar escribe FIN')
+							
+							if(seccion != "FIN")
+							{
+								seccionDinamicas[numeroSecciones] = seccion;
+								numeroSecciones++;
+							}
+							
+						}while(seccion != "FIN")
+
+				return seccionDinamicas;
+			}
+			
+
+
+
+			function pintarMenu(pLista,pTipo)
+			{
+				var listado = '<nav><ul class="'+pTipo+'">';
+				for(var i=0; i<pLista.length; i++)
+				{
+					var enlace = pLista[i].toLowerCase();
+
+					listado += '<li><a href="'+enlace+'.html">'+pLista[i]+'</a></li>';
+				}
+				listado += '</ul></nav>';
+				document.write(listado);
+
+			}
+
+			var listaPorFuncion = new Array();
+
+			listaPorFuncion = pedirSecciones();
+
+			pintarMenu(listaPorFuncion, 'vertical');
+
+
+
+	</script>
+</body>
+</html>

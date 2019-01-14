@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array multidimensional</title>
+</head>
+<body>
+	
+	<script>
+		
+		var zoo = new Array();
+
+		var aves = new Array('Aguila','Guacamayo','Lechuza','Colibri');
+
+		var felinos = new Array('Guepardo','León','Pantera', 'Tigre');
+
+		var anfibios = new Array('Hipopotamo','Cocodrilo','Rana');
+
+		zoo = [aves, anfibios, felinos];
+
+		//console.log(zoo);
+
+		//console.log(zoo[2][2])
+
+	/*	var contenido  = '<ul>';
+
+		for(var i = 0; i< zoo.length; i++)
+		{
+				for(var j = 0; j< zoo[i].length; j++ )
+				{
+					contenido += '<li>'+(zoo[i][j])+'</li>';
+				}
+		}
+
+		contenido += '</ul>';
+
+		document.write(contenido); */
+
+		//listados independientes.
+
+		//una sola lista
+
+/*		var aves = "<h1>AVES</h1><ul>";
+
+		for(var k = 0 ; k < zoo[0].length; k++)
+		{
+			aves += '<li>'+zoo[0][k]+'</li>';
+		}
+
+		aves += '</ul>';
+
+		document.write(aves); */
+
+
+
+		//todas las listas por separado
+		var otrocontenido = "";
+
+		for(var x = 0; x< zoo.length; x++)
+		{
+			switch(x)
+			{
+				case 0:
+					otrocontenido = "<h1>Aves</h1>";
+				break;
+
+				case 1: 
+					otrocontenido = "<h1>Anfibios</h1>";
+				break;
+
+				case 2:
+					otrocontenido = "<h1>Felinos</h1>";	
+				break;
+			}
+
+			otrocontenido += '<ul>';
+				for(var y = 0; y< zoo[x].length; y++ )
+				{
+					otrocontenido += '<li>'+(zoo[x][y])+'</li>';
+				}
+
+			otrocontenido += '</ul>';
+			document.write(otrocontenido);
+		}
+
+
+
+
+
+	</script>
+</body>
+</html>

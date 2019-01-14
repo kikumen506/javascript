@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array multidimensional asociativo</title>
+</head>
+<body>
+	
+
+	<script>
+		
+		var listaAlumnos = new Array();
+
+		var alumno1 = {'nombre': 'Juan', 'apellido': 'Perez', 'edad': 36, 'nota': 10}
+		var alumno2 = {'nombre': 'Kike', 'apellido': 'Gonzalez', 'edad': 27, 'nota': 9}
+		var alumno3 = {'nombre': 'Alex', 'apellido': 'Ortiz', 'edad': 24, 'nota': 8}
+		var alumno4 = {'nombre': 'Mario', 'apellido': 'Giron', 'edad': 35, 'nota': 4}
+
+
+		listaAlumnos = [alumno1, alumno2, alumno3, alumno4];
+
+		/* for(var i=0; i < listaAlumnos.length; i++)
+		{
+			for(var key in listaAlumnos[i])
+			{
+				console.log(key + ": " + listaAlumnos[i][key]);
+			}
+		} */
+
+		//sacarme por consola solo los alumnos suspensos
+
+		for(var i=0; i < listaAlumnos.length; i++)
+		{
+			if(listaAlumnos[i].nota < 5)
+			{
+				for(var key in listaAlumnos[i])
+				{
+				console.log(key + ": " + listaAlumnos[i][key]);
+				}	
+			}
+			
+		}
+
+	</script>
+</body>
+</html>

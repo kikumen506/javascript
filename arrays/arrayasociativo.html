@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array Asociativo - JSON solo de datos</title>
+</head>
+<body>
+	
+
+	<script>
+		
+		//Un array asociativo no tiene posición, si no que maneja el concepto de clave -> valor. Es decir cada elemento del array tiene una clave a las que se asocia. Esto me permite tener un array con distinta tipollogia de elementos. 
+
+
+		var alumno1 = new Array();
+		var alumno2 = new Array();
+		var alumno3 = new Array();
+
+		alumno1 = {'nombre' : 'Juan', 'edad' : 36, 'matricula': 'A3245', 'sede' : 'Madrid', 'estado' : true}  
+
+		alumno2 = {'nombre' : 'Kike', 'edad' : 27, 'matricula': 'A3547', 'sede' : 'Madrid', 'estado' : true}  
+
+		alumno3 = {'nombre' : 'Jeni', 'edad' : 22, 'matricula': 'A12345', 'sede' : 'Barcelona', 'estado' : false} 
+
+
+		console.log(alumno2['edad']); //nomenclatura de corchete
+
+		console.log(alumno2.edad); //nomenclatura de punto.
+
+		var alumno = '<ul>';
+
+		for( var clave in alumno1)
+		{
+			alumno += '<li>'+clave + ": " + alumno1[clave]+'</li>';
+		}
+
+		alumno += '</ul>';
+
+		document.write(alumno);
+
+
+
+
+	</script>
+</body>
+</html>

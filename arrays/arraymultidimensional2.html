@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array multidimensional</title>
+</head>
+<body>
+	
+	<script>
+		
+		var zoo = new Array();
+
+		var aves = new Array('Aguila','Guacamayo','Lechuza');
+
+		var felinos = new Array('Guepardo','León','Pantera', 'Tigre');
+
+		var anfibios = new Array('Hipopotamo','Cocodrilo','Rana');
+
+		zoo = [aves, anfibios, felinos];
+
+	
+		function pintarListado(pLista, pNombreListado)
+		{
+
+			var contenido = '<h1>'+pNombreListado+'</h1><ul>';
+
+			for(var i= 0; i< pLista.length; i++)
+			{
+				contenido += '<li>'+pLista[i]+'</li>';
+			}
+
+			contenido += '</ul>';
+			document.write(contenido);
+
+		}
+
+
+		pintarListado(zoo[0], "Aves");
+		pintarListado(zoo[1], "Anfibios");
+		pintarListado(zoo[2], "Felinos");
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

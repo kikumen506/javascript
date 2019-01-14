@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array Simple</title>
+</head>
+<body>
+	
+
+	<script>
+		
+
+		var listaAlumnos = new Array();
+
+		listaAlumnos = ['Sara', 'Ana', 'Alex', 'Kike', 'Hector', 'Antonio', 'Mario', 'Gloria'];
+
+		//lista se numeran de 0 a N-1 siendo N la logintud total de la lista.
+
+		console.log(listaAlumnos); //por consola el listado completo.
+		console.log(listaAlumnos.length); //por consola la cantidad total de elementos - longitud
+		//console.log(listaAlumnos[3]) //se visualiza el elementos en posicion 3;
+
+		//pintar por pantalla
+
+		var listaHtml = '<ul>';
+
+
+		for(var i = 0; i < listaAlumnos.length; i++)
+		{
+			listaHtml = listaHtml + '<li>'+listaAlumnos[i]+'</li>';
+		}
+
+		listaHtml += '</ul>'; 
+
+
+
+		for(var j = (listaAlumnos.length -1); j >= 0; j--)
+		{
+			console.log(listaAlumnos[j]);
+		}
+
+
+		document.write(listaHtml);
+
+	</script>
+</body>
+</html>
